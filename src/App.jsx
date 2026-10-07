@@ -484,7 +484,7 @@ function Monitor() {
   const togglePower = () => (isOff ? reboot() : setPhase('off'))
 
   return (
-    <div className="phosphor relative z-2 w-full max-w-[860px] animate-monitor-in" style={{ '--phos': color }}>
+    <div className="phosphor relative z-2 w-full max-w-[860px] animate-monitor-in motion-reduce:animate-none" style={{ '--phos': color }}>
       <div className="bezel rounded-t-[28px] rounded-b-[10px] p-[clamp(12px,2.5vw,26px)]">
         <div className="crt-screen relative overflow-hidden">
           <div

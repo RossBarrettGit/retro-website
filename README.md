@@ -1,16 +1,44 @@
-# React + Vite
+# RETRO-OS
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A retro CRT computer in your browser — a beige 1986 monitor glowing in front of a synthwave sunset.
 
-Currently, two official plugins are available:
+**[▶ View it live](https://retro.ross-dev.workers.dev/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![RETRO-OS screenshot](docs/screenshot.png)](https://retro.ross-dev.workers.dev/)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Boot sequence** — BIOS checks type out line by line, then a loading bar (press any key to skip)
+- **CRT effects** — phosphor glow, scanlines, a rolling refresh bar, subtle flicker and a power-on/off squash
+- **Live screen** — a spinning wireframe cube, an oscilloscope signal, system meters, a clock and a scrolling ticker
+- **Working terminal** — type commands at the `C:\>` prompt (↑/↓ for history)
+- **Phosphor colours** — switch between green, amber and cyan
+- **Power button** — turn the monitor off and on to watch it reboot
+- **Synthwave backdrop** — a starfield, a striped neon sun, a scrolling grid floor and floating shapes
+- Respects **reduced motion** settings
 
-## Expanding the Oxlint configuration
+## Terminal commands
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+| Command | What it does |
+| --- | --- |
+| `help` | List all commands |
+| `about` | About this machine |
+| `date` | Current date and time |
+| `color green` / `amber` / `cyan` | Change the phosphor colour |
+| `fortune` | Wisdom from the mainframe |
+| `echo <text>` | Repeat after me |
+| `clear` | Clear the screen |
+| `reboot` | Restart the system |
+
+## Built with
+
+[React](https://react.dev/) · [Vite](https://vite.dev/) · [Tailwind CSS](https://tailwindcss.com/) · hosted on [Cloudflare Workers](https://workers.cloudflare.com/)
+
+## Running locally
+
+```bash
+npm install
+npm run dev      # dev server at http://localhost:5173
+npm run build    # production build in dist/
+npm run lint     # lint with Oxlint
+```
